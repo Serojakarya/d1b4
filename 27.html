@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/j.js" type="text/javascript"></script><script src="js/s.js" type="text/javascript"></script>
+  		<script type="text/javascript" src="jquery.min.js"></script>
+
+  
+
+
+
+<style>
+* {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+    quotes: none;
+    text-decoration: unset;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+	
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #fffdf1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #fffdf1;
+    overflow-x: hidden;
+    margin: 0px 0px;
+}
+
+#t {
+    text-align: justify;
+    line-height: 2;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #fffdf1;
+    border-radius: 0px;
+	font-size: 17px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 11px;
+    padding-top: 11px;
+    font-size: 19px;
+	color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+	border-bottom: double #f58181;
+    border-top: double #f58181;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #f2f2f2;
+    border-radius: 0px;
+    line-height: 1.2;
+    font-family: "georgia"
+	text-align: center;
+
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #0A3158;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+
+
+
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+		
+    }
+	
+	
+	phr {
+		color:#918e8f;
+		font-size:17px;
+		font-style: italic;
+	}
+
+	pnt {
+		color:black;
+		font-size:14px;
+		font-style: italic;
+	}
+
+nav {
+    padding: 10px 20px;
+}
+
+nav .brand a{
+    color: black;
+}
+
+main {
+    padding: 10px 10px 70px;
+    position: relative;
+}
+
+main p {
+    padding: 0px 0;
+}
+.bottom-nav {
+    padding: 5px;
+    background-color: #f2f2f2;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+	padding-left: -5px;
+	border: 0.5px solid #f58181;
+}
+
+.bottom-link-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav a {
+    color: #f58181;
+    cursor: pointer;
+}
+
+.bottom-nav a svg {
+    width: 25px;
+}
+
+.bottom-nav a:nth-child(3) {
+    transform: scale(1.5) translateY(-10px);
+    background-color: #f2f2f2;
+    border-radius: 1000px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f58181;
+    color: #f58181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bottom-nav {
+        width: 100%;
+        bottom: 0%;
+        left: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-transform: translate(-50%,0%);
+           -moz-transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+             -o-transform: translate(-50%,0%);
+                transform: translate(-50%,0%);
+    }
+
+    .bottom-link-nav {
+        position: relative;
+        width: 450px;
+    }
+
+}
+
+
+
+</style>
+<style> 
+	 @font-face{;
+        font-family:"LPMQ_IsepMisbah";
+        src:url("LPMQ_IsepMisbah.ttf")
+    }
+
+	
+	 @font-face{;
+        font-family:"KFGQPC Uthman Taha Naskh Bold";
+        src:url("fonts.ttf")
+    }
+</style>
+	
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('body').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('body').css("font-size", size);
+            });
+        });
+    </script>
+<script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('#content').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('#content').css("font-size", size);
+            });
+        });
+</script>
+</head>	
+<body>
+<div id="mnj" style="display: block; position: right;">
+<ul id="tejaul">
+<li><a href="1.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold">  يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّمْ </font></a></li>
+<li><a href="2.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> اِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِيْنًاۙ </font></a></li>
+<li><a href="3.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold">  يَارَسُوْلَ اللّٰه سَلَامٌ عَلَيْكَ  </font></a></li>
+<li><a href="4.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> اَلْحَمْدُ لِلّٰهِ الْقَوِيِّ الْغَالِبْ </font></a></li>
+<li><a href="5.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> قِيْلَ هُوَ اٰدَمُ قَالَ اٰدَمُ بِهِ </font></a></li>
+
+<li><a href="6.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> يُبْعَثُ مِنْ تِهَامَةَ بَيْنَ </font></a></li>
+<li><a href="7.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> ثُمَّ أَرُدُّهٗ مِنَ الْعَرْشِ </font></a></li>
+<li><a href="8.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> صَلَاةُ اللّٰهِ مَالاَحَتْ كَوَاكِبْ </font></a></li>
+
+<li><a href="9.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَسُبْحَانَ مَنْ خَصَّهٗ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ </font></a></li>
+<li><a href="10.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold">اَلْحَدِيْثُ الْأَوَّلُ</font></a></li>
+
+<li><a href="11.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> اَلْحَدِيْثُ الثَّانِيُّ </font></a></li>
+<li><a href="12.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَيَقُوْلُ الْحَقُّ وَعِزَّتِيْ وَجَلاَلِيْ </font></a></li>
+<li><a href="13.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> أَحْضِرُوْا قُلُوْبَكُمْ  </font></a></li>
+<li><a href="14.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَاهْتَزَّ الْعَرْشُ طَرَبًا وَاسْتِبْشَارًا </font></a></li>
+<li><a href="15.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold">مَحَلُّ اْلقِيَامِ</font></a></li>
+<li><a href="16.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> وَوُلِدَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ </font></a></li>
+<li><a href="17.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> قِيْلَ مَنْ يَّكْفُلُ هٰذِهِ الدُّرَّةَ الْيَتِيْمَةَ  </font></a></li>
+<li><a href="18.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> ثُمَّ أَعْرَضَ عَنْهُ مَرَاضِعُ الْإِنْسِ </font></a></li>
+<li><a href="19.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَبَيْنَمَا هُوَ ذَاتَ يَوْمٍ نَاءٍ </font></a></li>
+<li><a href="20.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَقَالَتِ الْمَلَآئِكَةُ يَاحَبِيْبَ الرَّحْمٰنِ  </font></a></li>
+<li><a href="21.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَبَيْنَمَا الْحَبِيْبُ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ </font></a></li>
+<li><a href="22.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> فَلَمَّا رَأَتْهُ حَلِيْمَةُ سَالِمًا </font></a></li>
+<li><a href="23.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> وَكَانَ صَلىَّ اللهُ عَلَيْهِ وَسَلَّمَ </font></a></li>
+<li><a href="24.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> وَقِيْلَ لِبَعْضِهِمْ كَأَنَّ وَجْهَهُ الْقَمَرُ  </font></a></li>
+<li><a href="25.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> وَمَا عَسٰى أَنْ يُقَالَ فِيْمَنْ </font></a></li>
+<li><a href="26.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> يَابَدْرَتِمٍّ حَازَ کُلَّ كَمَالِ </font></a></li>
+<li><a href="27.html"><font size="4" face="KFGQPC Uthman Taha Naskh Bold"> الدعاء </font></a></li>
+
+
+
+</ul>
+</div>
+
+
+	
+		</div><div data-role="content"><div id="t">
+	
+
+
+
+<h1><font size="5" face="KFGQPC Uthman Taha Naskh Bold">الدعاء</font><br/>
+<a class="font-button plus"><img style="bottom:10px;position:fixed;right:0px;width:35px;" src=""/><img src="masjid4.png">&nbsp;&nbsp;<br/><br/>
+<a class="font-button minus"><img style="bottom:10px;position:fixed;left:0px;width:35px;" src=""/><img src="masjid3.png"></a>
+
+</h1><br/><br/>
+
+
+
+</div>
+
+
+
+
+
+<div class="arabcenter">
+الدعاء
+</div>
+
+
+<div class="arab3center">
+اَللّٰهُـمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَيْهِ
+</div>
+
+<div class="arab2center">
+اَلْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ ۞ اَللّٰهُمَّ صَلِّ وَسَلِّمْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلىٰ اٰلِهٖ وَصَحْبِهٖ أَجْمَعِيْن ۞ جَعَلَنَا اللهُ وَإِيَاكُمْ مِمَّنْ يَسْتَوْجِبُ شَفَاعَتَهُ ۞ وَيَرْجُوْ بِذٰلِكَ رَحْمَتَهُ وَرَأْفَتَهُ ۞ أَللّٰهُمَّ بِحُرْمَةِ هٰذَا النَّبِيِّ الْكَرِيْمِ ۞ وَاٰلِهِ وَأَصْحَابِهِ السَّالِكِيْنَ عَلىٰ مَنْهَجِهِ الْقَوِيْمِ ۞ إِجْعَلْنَا مِنْ خِيَارِ أُمَّتِهٖ ۞ وَاسْتُرْنَا بِذَيْلِ حُرْمَتِهِ ۞ وَاحْشُـرْنَا غَدًا فِيْ زُمْرَتِهِ ۞ وَاسْتَعْمِلْ أَلْسِنَتَنَا فِيْ مَدْحِهٖ وَنُصْـرَتِهِ ۞ وَأَحْيِنَا مُتَمَسِّكِيْنَ بِسُنَّتِهِ وَطَاعَتِهِ ۞ وَأَمِتْنَا عَلىٰ حُبِّهٖ وَجَمَاعَتِهِ ۞ أَللّٰهُمَّ أَدْخِلْنَا مَعَهُ الْجَنَّةَ فَإِنَّهُ أَوَّلُ مَنْ يَدْخُلُهَا ۞ وَأَنْزِلْنَا مَعَهٗ فِيْ قُصُوْرِهَا ۞ فَإِنَّهُ أَوَّلُ مَنْ يَنْزِلُهَا ۞ وَارْحَمْنَا يَوْمَ يَشْفَعُ لِلْخَلَآئِقِ فَتَرْحَمُهَا ۞ أَللّٰهُمَّ ارْزُقْنَا زِيَارَتَهٗ فِيْ كُلِّ سَنَةٍ ۞ وَلاَ تَجْعَلْنَا مِنْ الْغَافِلِيْنَ عَنْكَ وَلاَ عَنْهُ قَدْرَ سِنَةٍ ۞ أَللّٰهُمَّ لاَ تَجْعَلْ فِيْ مَجْلِسِنَا هٰذَا أَحَدًا إِلاَّ غَسَلْتَ بِمَاءِ التَّوْبَةِ ذُنُوْبَهُ ۞ وَسَتَرْتَ بِرِدَآءِ الْمَغْفِرَةِ عُيُوْبَهُ ۞ اَللّٰهُمَّ إِنَّهٗ كَانَ مَعَنَا فِي السَّنَةِ الْمَاضِيَةِ ۞ إِخْوَانٌ مَنَعَهُمُ اْلقَضَآءُ عَنِ الْوُصُوْلِ اِلٰى مِثْلِهَا ۞ فَلاَ تَحْرِمْهُمْ مِنْ ثَوَابِ هٰذِهِ السَّاعَةِ وَفَضْلِهَا ۞ اَللّٰهُمَّ ارْحَمْنَا إِذَا صِرْنَا مِنْ أَصْحَابِ الْقُبُوْرِ ۞ وَوَفِّقْنَا لِعَمَلٍ صَالِحٍ يَبْقٰى سَنَاهُ عَلىٰ مَمَرِّ الدُّهُوْرِ ۞ اَللّٰهُمَّ اجْعَلْنَا لِاٰلَآئِكَ ذَاكِرِيْنَ ۞ وَلِنَعْمَآئِكَ شَاكِرِيْنَ ۞ وَلِيَوْمِ لِقَآئِكَ مِنَ الذَّاكِرِيْنَ ۞ وَأَحْيِنَا بِطَاعَتِكَ مَشْغُوْلِيْنَ ۞ وَإِذَا تَوَفَّيْتَنَا فَتَوَفَّنَا غَيْرَ مَفْتُوْنِيْنَ ۞ وَلاَ مَخْذُوْلِيْنَ ۞ وَٱخْتِمْ لَنَا مِنْكَ بِخَيْرٍ أَجْمَعِيْنَ ۞ اَللّٰهُمَّ اكْفِنَا شَرَّ الظَّالِمِيْنَ ۞ وَاجْعَلْنَا مِنْ فِتْنَةِ هٰذِهِ الدُّنْيَا سَالِمِيْنَ ۞ اَللّٰهُمَّ اجْعَلْ هٰذَا الرَّسُوْلَ الْكَرِيْمَ لَنَا شَفِيْعًا ۞ وَارْزُقْنَا بِهِ يَوْمَ الْقِيَامَةِ مَقَامًا رَفِيْعًا ۞ اَللّٰهُمَّ اسْقِنَا مِنْ حَوْضِ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ شَرْبَةً هَنِيْئَةً لاَ نَظْمَأُ بَعْدَهَا أَبَدًا ۞ وَاحْشُــرْنَا تَحْتَ لِوَآئِهِ غَدًا ۞ اَللّٰهُمَّ اغْفِرْ لَنَا بِهٖ وَلِاٰبـَآئِنَا وَلِأُمَّهَآتِنَا وَلِمَشَايِخِنَا وَلِمُعَلِّمِيْنَا ۞ وَذَوِي الْحُقُوْقِ عَلَيْنَا وَلِمَنْ أَجْرٰى هٰذَا الْخَيْرَ فِيْ هٰذِهِ السَّاعَةِ ۞ وَلِجَمِيْعِ الْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ ۞ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ ۞ اَلْأَحْيَآءِ مِنْهُمْ وَالْأَمْوَاتِ ۞ إِنَّكَ كَرِيْمٌ مُجِيْبُ الدَّعَوَاتِ ۞ وَقَاضِــــيَ الْحَاجَاتِ ۞ وَغَافِرُ الذُّنُوْبِ وَالْخَطِيْئَاتِ ۞ يَاأَرْحَمَ الرَّاحِمِيْنَ ۞ وَصَلَّى اللهُ عَلىٰ سَيِّدِنَا مُحَمَّدٍ وَعَلىٰ اٰلِهِ وَصَحْبِهٖ وَسَلَّمَ ۞ سُبْحَانَ رَبِّــكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ ۞ وَسَلاَمٌ عَلىٰ الْمُرْسَلِيْنَ ۞ وَالْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ ۞ ﴿ اَلْفَاتِحَةْ ﴾
+</div>
+
+</div>
+<br/><br/>
+
+  <div class="bottom-nav">
+    <div class="bottom-link-nav"> 
+    <a href="index.html">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+    </a>
+
+    <a href="26.html">
+	<svg style="width:30px;height:30px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M18,11V13H10L13.5,16.5L12.08,17.92L6.16,12L12.08,6.08L13.5,7.5L10,11H18M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12Z" /></svg>
+    </a>
+	
+    <a href="">
+    <font size="3" face="LPMQ_IsepMisbah">٢٧</font>
+	</a>
+	
+	<a href="">
+      
+    <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" /></svg>
+    </a>
+	
+    <a href="#" id="tmnj">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+    </a>
+	
+
+    </div>
+
+
+
+
+
+</body>
+</html>
